@@ -1,0 +1,47 @@
+0.  GIF - 256 colors for each frame.
+    BMP - 16 million
+    JPEG - 16 million
+    PNG - 16 million
+    
+1.  GIF & PNG
+
+2.  Compression that causes loss of information is 'lossy, eg - .JPEG. Otherwise it's lossless, eg - .PNG.
+
+3.  .JPEG & .GIF (if there are more than 256 colors).
+
+4.  When a file is deleted on a FAT file system, technically, the file's address is shifted to the list of 'free' clusters that can be recycled. The file data itself is untouched! 
+
+5.  -Encrypt the user files.
+    -Overwrite them with ASCII NUL bytes one or two times.
+    So even if the hacker 'overcomes' the overwritten layer, the data is still encrypted!
+    
+6.  It's a header file including the declarations of various integer data types of varying 'widths'. eg - uint8_t ets.
+
+7.  Using these, we can accurately choose and allocate memory for the type of integer value we use. We can also accurately manipulate sign of these integers.
+    
+8.  BYTE - 1 byte
+    DWORD - 4 bytes
+    LONG - 4 bytes
+    WORD - 2 bytes
+
+9.  First two bytes contain the 'signature' of a bitmap file; 0x4d42.
+
+10. bfSize is a field of type DWORD in BITMAPFILEHEADER struct, whereas biSize is a field of the same type, but in the BITMAPINFOHEADER struct.
+
+11. If biHeight is negative, the bitmap is a top-down bitmap and its origin is the upper-left corner. It cannot be compressed.
+
+12. 'biBitCount' gives the bits per pixel.
+
+13. "w" mode will create a new file even if a file of the same name exists. So the only way fopen() can return NULL in this case is if there's no free memory to create this file.
+
+14. The third argument of 'fread()' tells it how many data element of specified size needs to be read. Here we only want to read the data once, thus we use '1' as the third
+    argument.
+    
+15. 3.
+
+16. fseek() here helps in skipping over the padding; biWidth doesn't include padding, so after every inner for-loop iteration, 'cursor'(pointer) is just before the padding, and fseek()
+    skips over them by moving this cursor by an appropriate amount, as calculated before.
+
+17. 'SEEK_CUR' tells seek() that it has to start moving the cursor from it's current location.
+
+18. Rick Astley (goddamnit) 
