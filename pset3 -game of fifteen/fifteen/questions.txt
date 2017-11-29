@@ -1,0 +1,9 @@
+questions.txt
+
+Computer Science 50
+Problem Set 3
+
+0. The framework of "Game of Fifteen" allows dimensions from 3x3 up to 9x9.
+1. The board is represented by a 2D array.
+2. Function "great" is called to great the player at the start.
+3. I need to implement init, draw, move, won.
