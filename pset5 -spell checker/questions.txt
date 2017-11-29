@@ -1,0 +1,35 @@
+0.  An artificial long word said to mean a lung disease caused by inhaling very fine ash and sand dust. Also, the longest word in existance.
+
+1.  The getrusage() function provides measures of the resources used by the current process or its terminated and waited-for child processes. 
+
+2.  16.
+
+3.  "before" and "after" are pointers which point to the first field of the struct. Passing them without '&' will pass the address itself, not the value at this address, and not the values
+    of the subsequent members too!
+
+4.  In the for-loop, we declare an int 'c', initialised with the first char of 'fp'. We can do this because ints and chars are interchangable due to the existance of ASCII. Loop runs till 
+    'c' becomes the special EOF char. After every condition check, "cursor" (fp) is shifted to the next char in the file and it's assigned to 'c'. That's the update in the loop. For every 
+    value of 'c', if-else conditions check whether it's an alphabet/apostrophe, a digit, or anything else. 
+    
+    If it's an alpha/apostrophe, it's assigned a place in the buffer, 'word'. Index is updated, and if index > LENGTH, while loop consumes the rest of the string by iterating over it but 
+    doing nothing, as no word is longer than LENGTH chars. Index is assigned 0 for new word.
+    
+    If it's a digit, while loop consumes alphanum string using 'isalnum()', as it can't be a word. Index is assigned 0 for new word.
+    
+    If is neither an alphabet nor a digit, and inder > 0, it means it must be a word, be is correct or not. '\0' is assigned to the current index in 'word' to end the string. "Words" is 
+    updated (which keeps track of the total num of words found). Spelling is checked and resource usages are obtained both before and after this process. "time_check" is updated. If word is
+    misspelled, it's printed out. Index is assigned 0 for new word.
+    
+5.  We HAVE to iterate char by char to deduce whether there's a char other than an alpha or apostrophe in the word, even if we use fscanf(). Also, to check the length we'll have to use 
+    'strlen()'. This will only increase the length and complexity of the code unnecessarily.
+    
+6.  The word we are checking in every run of the for-loop and the dictionary we're using in main are not gonna change, thus we declare them as const char*.
+
+7.  Hashtable. A combinations of an array and linked lists. Each element of such a list being a "node", containing a word and a pointer to the next node in the list. The array containing
+    such node pointers as elements, each pointing to a linked list.
+    
+8.  Hah! Well, it took 10-point-something seconds. Now, it takes 2.5-ish. Still not as good as the staff's version, but I suppose that's because I used a hashtable instead of a trie.
+
+9.  Removed unnecessory loops and if conditions, that's all really.
+
+10. No. I believe I got all the performance I could get out of a hashtable, at least with my current level of comfort with the structure!
